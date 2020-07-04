@@ -1,0 +1,14 @@
+.wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  #startbtn {
+    background-color: indigo;
+    color: lightgrey;
+  }
+  .outcome {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
