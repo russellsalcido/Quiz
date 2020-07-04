@@ -75,3 +75,16 @@ choices.addEventListener("click", function (event) {
       }
     }
   });
+
+  function endGame() {
+    Questionsdiv.setAttribute("hidden", "true");
+    EndScreen.removeAttribute("hidden");
+    finalscore.textContent = score + "/" + questions.length;
+  }
+
+  var submit = document.getElementById("submit");
+
+  submit.addEventListener("click", function (event) {
+    var intials = document.getElementById("initials");
+    window.location.href = "score.html";
+  });
