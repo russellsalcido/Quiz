@@ -1,53 +1,53 @@
 // The array of questions
 var questions = [
     {
-      title: "Question 1",
+      title: "What is fastest method for learning to code?",
       choice: [
-        "A",
-        "B",
-        "C",
-        "D"
+        "Code Camp",
+        "Changing stuff and seeing what happens",
+        "Reading",
+        "You Tube"
       ],
-      answer: "Answer 1",
+      answer: "Changing stuff and seeing what happens",
     },
     {
-      title: "Question 2",
+      title: "What is an algorithm?",
       choice: [
-        "A",
-        "B",
-        "C",
-        "D"
+        "Al Gore's drum class",
+        "A horrible attempt at spelling alligator",
+        "The word programmers use when they don't want to explain things",
+        "A fancy term to explain a killer AI"
       ],
-      answer: "Answer 2",
+      answer: "The word programmers use when they don't want to explain things",
     },
     {
-      title: "Question 3",
+      title: "What is the most coomon response after spending hours trying to debug only to have the issue correct itself miraculously?",
       choice: [
-        "A",
-        "B",
-        "C",
-        "D"
+        "What the #&@^&?",
+        "TCB (Tears, cheers, and beers)",
+        "BrainPain",
+        "Nirvana"
       ],
-      answer: "Answer 3",
+      answer: "What the #&@^&?",
     },
     {
-      title: "Question 4",
+      title: "You have tried EVERYTHING imaginable to find a bug, but it persists, why?",
       choice: [
-        "A",
-        "B",
-        "C",
-        "D"
+        "Computers hate you",
+        "Coding was the wrong career choice",
+        "Perhaps the entire world is conspiring against you",
+        "Typo"
       ],
-      answer: "Answer 4",
+      answer: "Typo",
     },
     {
-      title: "Question 5",
+      title: "Your page will NOT update and after reviewing every line, removing a chunk of your own hair, and crying you...?",
       choice: [
-        "A",
-        "B",
-        "C",
-        "D"
+        "Make a hotpocket",
+        "Blood shoots out of yoyur nose",
+        "You realize you never saved the change",
+        "The space time continuum breaks"
       ],
-      answer: "Answer 5",
+      answer: "You realize you never saved the change",
     },
   ];
