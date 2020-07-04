@@ -37,54 +37,67 @@ var timeEl = document.querySelector("#timer");
 var secondsLeft = 60;
 
 function setTime() {
-  var timerInterval = setInterval(function () {
-    secondsLeft--;
-    timeEl.textContent = "Time: " + secondsLeft;
+	var timerInterval = setInterval(function () {
+		secondsLeft--;
+		timeEl.textContent = "Time: " + secondsLeft;
 
-    if (secondsLeft === 0) {
-      clearInterval(timerInterval);
-      endGame();
-    }
-  }, 1000);
+		if (secondsLeft === 0) {
+			clearInterval(timerInterval);
+			endGame();
+		}
+	}, 1000);
 }
 
 var score = 0;
 
 choices.addEventListener("click", function (event) {
-    var element = event.target;
-    if (element.matches("button") === true) {
-      var answer = element.textContent.substring(3);
-      var outcome;
-      if (
-        element.textContent.substring(3) ===
-        questions[CurrentQuestionIndex].answer
-      ) {
-        score = score + 1;
-        outcome = "Correct!";
-      }
-      else {
-        secondsLeft = secondsLeft - 10;
-        outcome = "Incorrect!";
-      }
-      document.getElementById("outcome").innerHTML = outcome;
-      CurrentQuestionIndex++;
-      if (CurrentQuestionIndex === questions.length) {
-        endGame();
-      } else {
-        getQuestions();
-      }
-    }
-  });
+	var element = event.target;
+	if (element.matches("button") === true) {
+		var answer = element.textContent.substring(3);
+		var outcome;
+		if (
+			element.textContent.substring(3) ===
+			questions[CurrentQuestionIndex].answer
+		) {
+			score = score + 1;
+			outcome = "Correct!";
+		} else {
+			secondsLeft = secondsLeft - 10;
+			outcome = "Incorrect!";
+		}
+		document.getElementById("outcome").innerHTML = outcome;
+		CurrentQuestionIndex++;
+		if (CurrentQuestionIndex === questions.length) {
+			endGame();
+		} else {
+			getQuestions();
+		}
+	}
+});
 
-  function endGame() {
-    Questionsdiv.setAttribute("hidden", "true");
-    EndScreen.removeAttribute("hidden");
-    finalscore.textContent = score + "/" + questions.length;
-  }
+function endGame() {
+	Questionsdiv.setAttribute("hidden", "true");
+	EndScreen.removeAttribute("hidden");
+	finalscore.textContent = score + "/" + questions.length;
+}
 
-  var submit = document.getElementById("submit");
+var submit = document.getElementById("submit");
 
-  submit.addEventListener("click", function (event) {
-    var intials = document.getElementById("initials");
-    window.location.href = "score.html";
-  });
+submit.addEventListener("click", function (event) {
+	var intials = document.getElementById("initials");
+	window.location.href = "score.html";
+});
+
+var highscores = localStorage.getItem("highScores");
+if (highscores) {
+	highscores = JSON.parse(highscores);
+} else {
+	highscores = [];
+}
+
+highscores.push({
+	initials: "KM",
+	score: "3/5",
+});
+
+localStorage.setItem("highScores", JSON.stringify(highscores));
