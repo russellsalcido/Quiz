@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+            <p id="timer">Time:</p>    
+        </div>
+    </div>
+    <div class="wrapper">
+      <div id="startscreen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Text to explain quiz rules
+        </p>
+        <button id="startbtn">Start Quiz</button>
+      </div>
+      <div id="questions" class="hide">
+        <h2 id="questiontitle"></h2>
+        <div id="choices" class="choices">
+        </div>
+        <p id="outcome"></p>
+      </div>
+      <div id="endscreen" class="hide" hidden = "true">
+        <h2>All Done!</h2>
+        <p>Your Score is <span id="finalscore"></span></p>
+        <p><label>Enter Initials: </label><input id="initials" ><button id ="submit" class="btn btn-primary">Submit</button>
+        </p>
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/questions.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+  </body>
+    
+</html>
