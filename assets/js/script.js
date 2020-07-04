@@ -9,3 +9,12 @@ var CurrentQuestion;
 var EndScreen = document.getElementById("endscreen");
 var finalscore = document.getElementById("finalscore");
 
+function startquiz() {
+	setTime();
+	document.getElementById("startscreen");
+	//hide start screen
+	StartScreen.setAttribute("hidden", "true");
+	//display question screen
+	Questionsdiv.removeAttribute("class");
+	getQuestions();
+}
