@@ -18,3 +18,16 @@ function startquiz() {
 	Questionsdiv.removeAttribute("class");
 	getQuestions();
 }
+
+function getQuestions() {
+	CurrentQuestion = questions[CurrentQuestionIndex];
+	questiontitle.textContent = CurrentQuestion.title;
+	// Loop over every question object
+	choices.innerHTML = "";
+	for (var i = 0; i < CurrentQuestion.choice.length; i++) {
+		var ChoiceBtn = document.createElement("button");
+		ChoiceBtn.textContent = i + 1 + ". " + CurrentQuestion.choice[i];
+		// console.log(CurrentQuestion.choice[i]);
+		choices.appendChild(ChoiceBtn);
+	}
+}
