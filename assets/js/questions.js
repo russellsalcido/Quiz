@@ -36,9 +36,9 @@ var questions = [
         "Computers hate you",
         "Coding was the wrong career choice",
         "Perhaps the entire world is conspiring against you",
-        "Typo"
+        "A minute typo"
       ],
-      answer: "Typo",
+      answer: "A minute typo",
     },
     {
       title: "Your page will NOT update and after reviewing every line, removing a chunk of your own hair, and crying you...?",
