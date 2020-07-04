@@ -44,7 +44,7 @@ var questions = [
       title: "Your page will NOT update and after reviewing every line, removing a chunk of your own hair, and crying you...?",
       choice: [
         "Make a hotpocket",
-        "Blood shoots out of yoyur nose",
+        "Blood shoots out of your nose",
         "You realize you never saved the change",
         "The space time continuum breaks"
       ],
